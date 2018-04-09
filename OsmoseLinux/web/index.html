@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<style>
+#sensor_aqua {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 110px;
+	left: 180px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#sensor_oben_refill {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 285px;
+	left: 250px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#sensor_unten_refill {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 340px;
+	left: 250px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#abwasser_on {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 175px;
+	left: 660px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#osmose_on {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 250px;
+	left: 470px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#refill_on {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 80px;
+	left: 410px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#zulauf_on {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 105px;
+	left: 538px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#statusText {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 300px;
+	left: 60px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#modusText {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 25px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#refillText {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 110px;
+	left: 60px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#refillRuntimeText {
+	position: absolute; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 141px;
+	left: 60px;
+	right: 0px;
+	bottom: 0px;
+	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
+	z-index: 2;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+}
+
+#relativ {
+	position: relative;
+}
+</style>
+<title>OsmoseLinux</title>
+</head>
+<body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="jquery/jquery-3.0.0.slim.min.js"></script>
+	<script src="jquery/popper.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="jquery/reconnecting-websocket.js"></script>
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
+	<script language="javascript" type="text/javascript" src="chart/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/jquery.jqplot.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.canvasTextRenderer.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.canvasAxisLabelRenderer.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.canvasAxisTickRenderer.js"></script>	
+	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.dateAxisRenderer.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.barRenderer.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.highlighter.js"></script>
+	<script language="javascript" type="text/javascript" src="chart/moment.js"></script>
+	<link rel="stylesheet" type="text/css" href="chart/jquery.jqplot.min.css" />
+	<script>
+		/* Commando
+			{
+			 "cmd"					:	"status"
+			 "sensorTop"   			:	"ON/OFF"
+			 "sensorBottom			:	"ON/OFF"
+			 "sensorAqua			: 	"ON/OFF"
+			 "ventWasser  			:	"OPEN/CLOSED"
+			 "ventAbwasser  		:   "OPEN/CLOSE"
+			 "runOsmose"    		:   "int sec OsmoseProduction is running"
+			 "runRefill     		:   "int sec Refill Aqua is running"
+			 "runClean      		:   "int sec Cleaning Osmose is runing"
+			 "refillRunFailTime"   	:   "int sec"
+			 "osmoeRunFailTime"		:   "int sec"
+			 "automodus"        	:   "idle / clean / osmose / refill / error"
+			 "operaterModus         :   "idle / clean / osmose / refill / error"
+			 "time"					:   "time string of device"
+			}
+			
+			{
+			 "cmd"  				:	"setDbounceSensor"
+			 "sensorTopDbounce"   	:   "int sec"
+			 "sensorBottomDbounce"	:   "int sec"
+			 "sensorAquaDbounce"	:   "int sec"
+			}
+			
+			{
+			 "cmd"  				:	"setFailTime"
+			 "refillRunFailTime"   	:   "int sec"
+			 "osmoeRunFailTime"		:   "int sec"
+			}
+			 
+			{
+			 "cmd"  				:	"getDbounceSensor"
+			 "sensorTopDbounce"   	:   "int sec"
+			 "sensorBottomDbounce"	:   "int sec"
+			 "sensorAquaDbounce"	:   "int sec"
+			 }
+			 
+			 {
+			 "cmd"  				:	"writeConfig"
+			 }
+			 
+			 {
+			 "cmd"  				:	"readConfig"
+			 }
+			 
+		 */
+		//enum OsmoseState { sidle ,smanual, spclean, sclean ,sposmose, sosmose , serror,srclean,soff };
+		//                      0	   1		2		3		4			5		6		7	  8	 
+		var osmoseState = Object.freeze({
+			"0" : "Idle",
+			"1" : "Manuell",
+			"2" : "Cleaning",
+			"3" : "Cleaning",
+			"4" : "Osmose",
+			"5" : "Osmose",
+			"6" : "!!! FEHLER !!!",
+			"7" : "Cleaning",
+			"8" : "Off"
+		});
+		var osmoseModus = Object.freeze({
+			"0" : "Modus Manuell",
+			"1" : "Modus Automatik"
+		});
+
+		var refillModus = Object.freeze({
+			"0" : "Auffüllen aus",
+			"1" : "Auffüllen an",
+			"2" : "Auffüllen Fehler"
+		});
+		
+		
+		//var ws = new ReconnectingWebSocket("ws://osmosedev:8080/echo_all");
+		var wscmd = new ReconnectingWebSocket("ws://osmosedev:8080/wscmd");
+		
+		wscmd.onclose = function(event) {
+			console.log("websocket closed occurred.");
+			document.getElementById("websocketstatustxt").innerHTML = "Network: Disconnect";
+			 
+		}
+		
+		wscmd.onopen = function(event) {
+			   console.log("websocket Connection established");
+			   // Display user friendly messages for the successful establishment of connection
+			   document.getElementById("websocketstatustxt").innerHTML = "Network: Connected";  
+		}
+		
+		
+
+		wscmd.onmessage = function(evt) {
+			console.log(evt.data);
+			var json = JSON.parse(evt.data);
+			if (json.cmd == "status") {
+				//console.log("STATUS RECV");
+				if (json.sensorAqua == "true") {
+					document.getElementById("sensorAqua").src = "/img/sensor_passiv.png";
+				} else {
+					document.getElementById("sensorAqua").src = "/img/sensor.png";
+
+				}
+				if (json.sensorTop == "true") {
+					document.getElementById("sensorTop").src = "/img/sensor_passiv.png";
+				} else {
+					document.getElementById("sensorTop").src = "/img/sensor.png";
+				}
+				if (json.sensorBottom == "true") {
+					document.getElementById("sensorBottom").src = "/img/sensor_passiv.png";
+				} else {
+					document.getElementById("sensorBottom").src = "/img/sensor.png";
+				}
+
+				if (json.refillPump == "true") {
+					document.getElementById("refillPump").src = "/img/refill_wasser_on.png";
+				} else {
+					document.getElementById("refillPump").src = "/img/refill_wasser_off.png";
+				}
+
+				if (json.osmosePump == "true") {
+					document.getElementById("osmosePump").src = "/img/osmose_wasser_on.png";
+				} else {
+					document.getElementById("osmosePump").src = "/img/osmose_wasser_off.png";
+				}
+
+				if (json.cleanVent == "true") {
+					document.getElementById("abwasser_on").style.display = "block";
+					document.getElementById("cleanVent").src = "/img/abwasser_wasser_on.png";
+				} else {
+					document.getElementById("abwasser_on").style.display = "none";
+					document.getElementById("cleanVent").src = "/img/abwasser_wasser_off.png";
+
+				}
+
+				if (json.frischVent == "true") {
+					document.getElementById("frischVent").src = "/img/zulauf_wasser_on.png";
+					document.getElementById("zulauf_on").style.display = "block";
+				} else {
+					document.getElementById("zulauf_on").style.display = "none";
+				}
+
+				//console.log("Status: "+ osmoseState[json.modus]);	
+				if (osmoseState[json.modus] == "Cleaning") {
+					document.getElementById("statusTextInner").innerHTML = osmoseState[json.modus]
+							+ " ("
+							+ json.cleanRuntime
+							+ "/"
+							+ json.runtimeForCleaning + ")";
+				} else if (osmoseState[json.modus] == "Osmose") {
+					document.getElementById("statusTextInner").innerHTML = osmoseState[json.modus]
+							+ " (" + json.osmoseRuntime + ")";
+				} else {
+					document.getElementById("statusTextInner").innerHTML = osmoseState[json.modus];
+				}
+
+				//Modus Info
+				console.log("AnlagenModus:" + json.osmoseModus);
+				if (osmoseModus[json.osmoseModus] == "Modus Manuell") {
+					document.getElementById("modusTextInner").innerHTML = osmoseModus[json.osmoseModus];
+				} else if (osmoseModus[json.osmoseModus] == "Modus Automatik") {
+					document.getElementById("modusTextInner").innerHTML = osmoseModus[json.osmoseModus];
+				}
+
+				if (refillModus[json.refillState] == "Auffüllen aus") {
+					document.getElementById("modusTextInnerRefill").innerHTML = refillModus[json.refillState];
+					document.getElementById("modusRefillRuntime").innerHTML = "";
+				} else if (refillModus[json.refillState] == "Auffüllen an") {
+					document.getElementById("modusTextInnerRefill").innerHTML = refillModus[json.refillState];
+					document.getElementById("modusRefillRuntime").innerHTML = "Laufzeit:"
+							+ json.refillRuntime;
+
+				} else if (refillModus[json.refillState] == "Auffüllen Fehler") {
+					document.getElementById("modusTextInnerRefill").innerHTML = refillModus[json.refillState];
+				}
+
+			}
+			
+			
+			// SETUP Server->Client 
+			// Server sendet Setup Daten to Client
+			if (json.cmd == "setupdatatoclient") {
+				console.log(json);
+				var e = document.getElementById("DbounceSensorAqua");
+				e.value = json.sensorAquaDbounce;
+				e = document.getElementById("DbounceSensorTop");
+				e.value = json.sensorTopDbounce;
+				e = document.getElementById("DbounceSensorBottom");
+				e.value = json.sensorBottomDbounce;
+
+				e = document.getElementById("StartModus");
+				e.value = json.osmoseModus;
+
+				e = document.getElementById("RuntimeClean");
+				e.value = json.runtimeForCleaning;
+				e = document.getElementById("MaxOsmoseRuntime");
+				e.value = json.osmoseFailTime;
+				e = document.getElementById("MaxRefillRuntime");
+				e.value = json.refillFaillTime;
+				e = document.getElementById("osmoseRuntimeToClean");
+				e.value = json.osmoseRuntimeToClean;
+				
+				selectItemByValue(document.getElementById("IoPinSensorAqua"),json.IoPinSensorAqua);
+				selectItemByValue(document.getElementById("IoPinSensorTop"),json.IoPinSensorTop);
+				selectItemByValue(document.getElementById("IoPinSensorBottom"),json.IoPinSensorBottom);
+				
+				selectItemByValue(document.getElementById("IOsmoseManuelPort"),json.IOsmoseManuelPort);
+				selectItemByValue(document.getElementById("IOpumpRefillPort"),json.IOpumpRefillPort);
+				selectItemByValue(document.getElementById("IOrefillManuelPort"),json.IOrefillManuelPort);
+				selectItemByValue(document.getElementById("IOventCleanPort"),json.IOventCleanPort);
+				selectItemByValue(document.getElementById("IOventFreshWaterPort"),json.IOventFreshWaterPort);
+				
+				/*
+				document.getElementById("IoPinSensorAqua").selectedIndex 		= json.IoPinSensorAqua;
+				document.getElementById("IoPinSensorTop").selectedIndex 		= json.IoPinSensorTop
+				document.getElementById("IoPinSensorBottom").selectedIndex 		= json.IoPinSensorBottom;
+				
+				document.getElementById("IOsmoseManuelPort").selectedIndex 	    = json.IOsmoseManuelPort;
+				document.getElementById("IOpumpRefillPort").selectedIndex 		= json.IOpumpRefillPort;
+				document.getElementById("IOrefillManuelPort").selectedIndex 	= json.IOrefillManuelPort;
+				document.getElementById("IOventCleanPort").selectedIndex 		= json.IOventCleanPort;
+				document.getElementById("IOventFreshWaterPort").selectedIndex 	= json.IOventFreshWaterPort;
+				*/
+			}
+			
+			// Getting Statistik Infos from Server
+			moment.locale('us');
+			if (json.cmd == "sendStatistik") {
+				var statiRefill=[];
+				var statiProduction=[];
+				var graphdata;
+				 $("#tbodystatistik").empty();
+			//https://stackoverflow.com/questions/18395976/how-to-display-a-json-array-in-table-format	
+				$.each(json.statistik, function (index, item) {
+					
+					 // Unixtimestamp
+					 var unixtimestamp = item["startdatum"] ;
+					 // Months array
+					 // Convert timestamp to milliseconds
+					 var date = new Date(unixtimestamp*1000);
+					 // Year
+					 var year = date.getFullYear();
+					 // Month
+					 var month =  "0" + (date.getMonth()+1);
+					 // Day
+					 var day =  "0" + date.getDate();
+					 // Hours
+					 var hours =  ""+date.getHours();
+					 // Minutes
+					 var minutes = ""+date.getMinutes();
+					 // Seconds
+					 var seconds =  ""+date.getSeconds();
+					 // Display date time in MM-dd-yyyy h:m:s format
+					 var convdataTime = day.substr(-2)+'.'+month.substr(-2)+'.'+year+' '+hours.substr(-2) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+					 //graphdata = moment(convdataTime,"dd.mm.yyyy hh:mm:ss").format('YYYY-MM-DD h:mma');
+					 //graphdata = moment(convdataTime,"dd.mm.yyyy hh:mm:ss").format('YYYY-MM-DD h:mma');
+					 graphdata = moment.unix(unixtimestamp).format('YYYY-MM-DD h:mmA');
+					 console.log("graphdata: "+ graphdata);
+					 var eachrow = "<tr>"
+				                 + "<td>" + item["typ"] + "</td>"
+				                 + "<td>" + convdataTime + "</td>"
+				                 + "<td>" + item["duration"] + "</td>"
+				                 + "</tr>";
+				     if (item["typ"]=="RefillLauf")
+				        statiRefill.push([graphdata , item['duration']]); 
+				     
+				     if (item["typ"]=="OsmoseLauf")
+				    	 statiProduction.push([graphdata , item['duration']]);
+					        
+				     $('#tbodystatistik').append(eachrow);
+				
+				}
+				);
+				//line1=[['2008-08-12 4:00PM',4], ['2008-09-12 4:00PM',6.5], ['2008-10-12 4:00PM',5.7], ['2008-11-12 4:00PM',9], ['2008-12-12 4:00PM',8.2]];
+				//console.log("GraphTest:"+ line1);
+				console.log("GraphArray:"+ statiRefill);
+				$( "tr:odd" ).css("background-color", "#bbbbff" ); 
+				$( "tr:even").css("background-color",  "#eeeeee");
+				
+				/*
+				  var line1=[['2008-08-12 4:00PM',4], ['2008-09-12 4:00PM',6.5], ['2008-10-12 4:00PM',5.7], ['2008-11-12 4:00PM',9], ['2008-12-12 4:00PM',8.2]];
+				  $.jqplot('chartdiv', [line1], {
+				    title:'Default Date Axis',
+				    axes:{
+				        xaxis:{
+				            renderer:$.jqplot.DateAxisRenderer
+				        }
+				    },
+				    series:[{lineWidth:4, markerOptions:{style:'square'}}]
+				  });
+				  */
+				
+				$.jqplot('refillDIV',  [statiRefill],{
+				title:'Refill Dauer pro Tag',	
+				stackSeries: true,
+     			seriesDefaults: {
+     				renderer:$.jqplot.BarRenderer,
+     			    rendererOptions: {            
+     		            barPadding: 0,      // number of pixels between adjacent bars in the same
+     		                                // group (same category or bin).
+     		            barMargin: 0,      // number of pixels between adjacent groups of bars.
+     		            barDirection: 'vertical', // vertical or horizontal.
+     		            barWidth: 2
+
+     		        }                
+      			},
+      			axes: {
+        		xaxis: {
+        			renderer:$.jqplot.DateAxisRenderer,
+        			tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    tickOptions: {
+                         angle: -45,
+                         formatString:'%d.%m.%Y'
+                    },
+      				tickInterval: "1 day",
+      				numberTicks: 14
+        		},
+        		yaxis: {
+          			label: "Dauer",
+          			min: 0,
+          			tickInterval: 5,
+          			tickOptions:{prefix: 'sec '}
+        		}
+      			},
+      			highlighter: {
+      	            show:true,
+      	            useAxesFormatters: true,
+      	            formatString:'<table class="jqplot-highlighter"> \
+      	                <tr><td>date:</td><td>%s</td></tr> \
+      	                <tr><td>Sec:</td><td>%s</td></tr> \
+      	            </table>'
+      	        }
+    			});
+				  
+				
+				  $.jqplot('productionDIV',  [statiProduction],{
+						title:'Dauer Osmose Produktionslauf',	
+						stackSeries: true,
+		     			seriesDefaults: {
+		     				renderer:$.jqplot.BarRenderer,
+		     			    rendererOptions: {            
+		     		            barPadding: 0,      // number of pixels between adjacent bars in the same
+		     		                                // group (same category or bin).
+		     		            barMargin: 0,      // number of pixels between adjacent groups of bars.
+		     		            barDirection: 'vertical', // vertical or horizontal.
+		     		            barWidth: 2
+
+		     		        }                
+		      			},
+		      			axes: {
+		        		xaxis: {
+		        			renderer:$.jqplot.DateAxisRenderer,
+		        			tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+		                    tickOptions: {
+		                         angle: -45,
+		                         formatString:'%d.%m.%Y'
+		                    },
+		      				tickInterval: "1 day",
+		      				numberTicks: 14
+		        		},
+		        		yaxis: {
+		          			label: "Dauer",
+		          			min: 0,
+		          			tickInterval: 5,
+		          			tickOptions:{prefix: 'sec '}
+		        		}
+		      			},
+		      			highlighter: {
+		      	            show:true,
+		      	            useAxesFormatters: true,
+		      	            formatString:'<table class="jqplot-highlighter"> \
+		      	                <tr><td>date:</td><td>%s</td></tr> \
+		      	                <tr><td>Sec:</td><td>%s</td></tr> \
+		      	            </table>'
+		      	        }
+		    			});
+    			
+    			
+				console.log(json);
+			}
+		}
+
+
+
+		
+		function selectItemByValue(elmnt, value){
+
+		    for(var i=0; i < elmnt.options.length; i++)
+		    {
+		      if(elmnt.options[i].value == value){
+		        elmnt.selectedIndex = i;
+		      	return;
+		      }
+		    }
+		  }
+
+		function doReset() {
+			wscmd.send("{\"cmd\":\"reset\"}");
+		}
+
+		function fwscmd() {
+			wscmd.send("{\"cmd\":\"info\"}");
+		}
+
+		function readStatistik() {
+			wscmd.send("{\"cmd\":\"getStatistik\"}");
+		}
+		
+		function readConfig() {
+			wscmd.send("{\"cmd\":\"readConfig\"}");
+		}
+		
+		function readStatistik(){
+			wscmd.send("{\"cmd\":\"readStatistik\"}");
+		}
+
+		function writeConfig() {
+			//Select FIELD
+			//var e = document.getElementById("DbounceSensorAqua");
+			//var dbounceSensorAqua = e.options[e.selectedIndex].value;
+			var jsonObj = {};
+			jsonObj["cmd"] = "writeConfig";
+
+			var e = document.getElementById("DbounceSensorAqua");
+			var dbounceSensorAqua = e.value;
+			jsonObj["sensorAquaDbounce"] = parseInt(e.value);
+
+			e = document.getElementById("DbounceSensorTop");
+			var dbounceSensorTop = e.value;
+			jsonObj["sensorTopDbounce"] = parseInt(e.value);
+
+			e = document.getElementById("DbounceSensorBottom");
+			var dbounceSensorBottom = e.value;
+			jsonObj["sensorBottomDbounce"] = parseInt(e.value);
+
+			e = document.getElementById("StartModus");
+			var startModus = e.options[e.selectedIndex].value;
+			jsonObj["osmoseModus"] = parseInt(e.value);
+
+			e = document.getElementById("RuntimeClean");
+			var maxCleanRuntime = e.value
+			jsonObj["runtimeForCleaning"] = parseInt(e.value);
+
+			e = document.getElementById("MaxOsmoseRuntime");
+			var maxOsmoseRuntime = e.value;
+			jsonObj["osmoseFailTime"] = parseInt(e.value);
+
+			e = document.getElementById("MaxRefillRuntime");
+			var maxRefillRuntime = e.value;
+			jsonObj["refillFailTime"] = parseInt(e.value);
+
+			e = document.getElementById("osmoseRuntimeToClean");
+			var osmoseRuntimeToClean = e.value;
+			jsonObj["osmoseRuntimeToClean"] = parseInt(e.value);
+			
+			<!-- IO PIN -->
+			//jsonObj["IoPinSensorAqua"] 	 	= parseInt(document.getElementById("IoPinSensorAqua").selectedIndex);
+			jsonObj["IoPinSensorAqua"] 	 	= parseInt(document.getElementById("IoPinSensorAqua").value);
+			jsonObj["IoPinSensorTop"] 		= parseInt(document.getElementById("IoPinSensorTop").value);
+			jsonObj["IoPinSensorBottom"] 	= parseInt(document.getElementById("IoPinSensorBottom").value);
+			jsonObj["IOsmoseManuelPort"] 	= parseInt(document.getElementById("IOsmoseManuelPort").value);
+			jsonObj["IOpumpRefillPort"] 	= parseInt(document.getElementById("IOpumpRefillPort").value);
+			jsonObj["IOrefillManuelPort"]	= parseInt(document.getElementById("IOrefillManuelPort").value);
+			jsonObj["IOventCleanPort"] 		= parseInt(document.getElementById("IOventCleanPort").value);
+			jsonObj["IOventFreshWaterPort"] = parseInt(document.getElementById("IOventFreshWaterPort").value);
+	
+
+			console.log("Start Modus		:" + startModus);
+			console.log("Dbounce Aqua  		:" + dbounceSensorAqua);
+			console.log("Dbounce Top  		:" + dbounceSensorTop);
+			console.log("Dbounce Bottom  	:" + dbounceSensorBottom);
+			console.log("Max. Clean Time    :" + maxCleanRuntime);
+			console.log("Max. Osmose Time   :" + maxOsmoseRuntime);
+			console.log("Max. Refill Time   :" + maxRefillRuntime);
+			console.log("Cycle Clean Time   :" + osmoseRuntimeToClean);
+
+			console.log(jsonObj);
+
+			wscmd.send(JSON.stringify(jsonObj));
+		}
+
+		function on() {
+			document.getElementById("sensor_aqua").style.display = "block";
+			document.getElementById("sensor_oben_refill").style.display = "block";
+			document.getElementById("sensor_unten_refill").style.display = "block";
+			document.getElementById("abwasser_on").style.display = "block";
+			document.getElementById("osmose_on").style.display = "block";
+			document.getElementById("refill_on").style.display = "block";
+			document.getElementById("zulauf_on").style.display = "block";
+
+		}
+
+		function off() {
+			document.getElementById("sensor_aqua").style.display = "none";
+			document.getElementById("sensor_oben_refill").style.display = "none";
+			document.getElementById("sensor_unten_refill").style.display = "none";
+			document.getElementById("abwasser_on").style.display = "none";
+			document.getElementById("osmose_on").style.display = "none";
+			document.getElementById("refill_on").style.display = "none";
+			document.getElementById("zulauf_on").style.display = "none";
+		}
+	</script>
+
+
+
+	<div class="container">
+		<div id="websocketstatus">
+			<h6 class="text-danger">
+				<span id="websocketstatustxt" class="badge badge-secondary"></span>
+			</h6>
+		</div>
+		<!-- 
+		<div class="media">
+			<img class="mr-3" src="/img/PiPins.png" alt="Generic placeholder image">
+		</div>
+		 -->
+		<nav>
+		<div class="nav nav-tabs" id="nav-tab" role="tablist">
+			<a class="nav-item nav-link active" href="#automatic" role="tab"  data-toggle="tab" aria-controls="profile" aria-selected="true">Automatik Betrieb</a>
+			<a class="nav-item nav-link"       href="#statistik" role="tab" data-toggle="tab" aria-controls="statistik"  aria-selected="false" onclick="readStatistik()">Statistik</a>
+			<a class="nav-item nav-link"        href="#setup" role="tab"      data-toggle="tab" aria-controls="setup"   aria-selected="false" onclick="readConfig()">Setup</a>
+		</div>
+		</nav>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="automatic">
+				<div id="relativ">
+					<img class="mr-3" src="/img/main.png"
+						alt="Generic placeholder image">
+
+					<div id="sensor_aqua">
+						<img id="sensorAqua" class="mr-3" src="/img/sensor.png"
+							alt="Generic placeholder image">
+					</div>
+
+					<div id="sensor_oben_refill">
+						<img id="sensorTop" class="mr-3" src="/img/sensor.png"
+							alt="Generic placeholder image">
+					</div>
+
+					<div id="sensor_unten_refill">
+						<img id="sensorBottom" class="mr-3" src="/img/sensor.png"
+							alt="Generic placeholder image">
+					</div>
+
+					<div id="abwasser_on">
+						<img id="cleanVent" class="mr-3" src="/img/abwasser_wasser_on.png"
+							alt="Generic placeholder image">
+					</div>
+
+					<div id="osmose_on">
+						<img id="osmosePump" class="mr-3" src="/img/osmose_wasser_on.png"
+							alt="Generic placeholder image">
+					</div>
+
+					<div id="refill_on">
+						<img id="refillPump" class="mr-3" src="/img/refill_wasser_on.png"
+							alt="Generic placeholder image">
+					</div>
+
+					<div id="zulauf_on">
+						<img id="frischVent" class="mr-3" src="/img/zulauf_wasser_on.png"
+							alt="Generic placeholder image">
+					</div>
+
+
+					<div id="statusText">
+						<h6 class="text-danger">
+							<span id="statusTextInner" class="badge badge-secondary"></span>
+						</h6>
+					</div>
+					<div id="modusText">
+						<h6 class="text-danger">
+							<span id="modusTextInner" class="badge badge-secondary"></span>
+						</h6>
+					</div>
+					<div id="refillText">
+						<h6 class="text-danger">
+							<span id="modusTextInnerRefill" class="badge badge-secondary"></span>
+						</h6>
+					</div>
+					<div id="refillRuntimeText">
+						<h6 class="text-danger">
+							<span id="modusRefillRuntime" class="badge badge-secondary"></span>
+						</h6>
+					</div>
+				</div>
+				<p></p>
+				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+					<div class="btn-group mr-2" role="group" aria-label="Second group">
+						<button type="button" class="btn btn-outline-primary btn-sm" onclick="doReset()">Reset</button>
+					</div>
+			    </div>
+			</div>
+			
+			<div role="tabpanel" class="tab-pane fade" id="statistik">
+			<div class="container">
+			<p>Refill Zyklen Dauer</p>
+			<div class="mx-auto" id="refillDIV" style="height:400px;"></div>
+			<p></p>
+			<p></p>
+			<p>Osmose Produktions Dauer</p>
+			<div class="mx-auto" id="productionDIV" style="height:400px;"></div>
+			<p></p>
+			<p></p>
+			<p>Liste Refill & Produktions Dauer</p>
+			<table style="width: 100%">
+     		<thead>
+          		<tr>
+               		<th>Typ</th>
+               		<th>Start</th>
+               		<th>Laufzeit</th>
+           		</tr>
+     		</thead>
+     		<tbody id="tbodystatistik">
+     		</tbody>
+			</table>
+			<p></p>
+			<p></p>
+			
+			
+			</div>
+			</div>
+			
+			
+			<div role="tabpanel" class="tab-pane fade" id="setup">
+				<p></p>
+				<form>
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="card">
+									<div class="card-header">Dbounce Zeit der Sensoren</div>
+									<div class="card-body">
+										<div class="form-group row">
+											<label for="lDbounceSensorAqua"
+												class="col-sm-8 col-form-label col-form-label-sm">Sensor
+												Aqua</label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="DbounceSensorAqua" type="number" step="1" min="1"
+													max="60000">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="lDbounceSensorTop"
+												class="col-sm-8 col-form-label col-form-label-sm">Sensor
+												oben Reservoir</label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="DbounceSensorTop" type="number" step="1" min="1"
+													max="60000">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="lDbounceSensorBottom"
+												class="col-sm-8 col-form-label col-form-label-sm">Sensor
+												unten Reservoir</label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="DbounceSensorBottom" type="number" step="1" min="1"
+													max="60000">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+
+
+
+									<div class="col">
+									<p></p>
+										<div class="card"">
+											<div class="card-header">Start Modus</div>
+											<div class="card-body">
+												<div class="form-group row">
+													<label for="DbounceSensorAqua"
+														class="col-sm-8 col-form-label col-form-label-sm">Bei
+														Neustart Pi </label>
+													<div class="col-sm-4">
+														<select id="StartModus"
+															class="custom-select custom-select-sm">
+															<option selected value="0">Manuell</option>
+															<option value="1">Automatik</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<p></p>
+										<div class="card"">
+											<div class="card-header">Info Dienst</div>
+											<div class="card-body">
+												<div class="form-group row">
+													<label for="emaillabel"
+														class="col-sm-4 col-form-label col-form-label-sm">e-mail </label>
+													<div class="col-sm-8">
+														<input type="email" class="form-control" id="email1Input" aria-describedby="emailHelp" placeholder="Enter email">
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
+									</div>
+
+								</div>
+								<!-- ########################### TOOLBAR #################################### -->
+								<p></p>
+								<div class="btn-toolbar" role="toolbar"
+									aria-label="Toolbar with button groups">
+									<div class="btn-group mr-2" role="group"
+										aria-label="Second group">
+										<button type="button" class="btn btn-outline-primary btn-sm"
+											onclick="readConfig()">load</button>
+										<button type="button" class="btn btn-outline-primary btn-sm"
+											onclick="writeConfig()">save</button>
+									</div>
+								</div>
+
+
+							</div>
+
+
+							<div class="col">
+								<div class="card">
+									<div class="card-header">Laufzeiten / Dauer</div>
+									<div class="card-body">
+
+										<div class="form-group row">
+											<label for="RuntimeClean"
+												class="col-sm-8 col-form-label col-form-label-sm">Dauer
+												Clean Lauf </label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="RuntimeClean" type="number" step="1" min="30" max="600">
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label for="cyleTime"
+												class="col-sm-8 col-form-label col-form-label-sm">Zyklus
+												Clean</label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="osmoseRuntimeToClean" type="number" step="1" min="1"
+													max="30000">
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label for="MaxOsmoseRuntime"
+												class="col-sm-8 col-form-label col-form-label-sm">Max.
+												Osmose Dauer </label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="MaxOsmoseRuntime" type="number" step="1" min="1"
+													max="86400">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="MaxRefillRuntime"
+												class="col-sm-8 col-form-label col-form-label-sm">Max.
+												Refill Dauer </label>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm"
+													id="MaxRefillRuntime" type="number" step="1" min="1"
+													max="600">
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<p></p>
+								<div class="card">
+								
+									<div class="card-header">Raspberry PI Config</div>
+									<div class="card-body">
+
+										<div class="form-group row">
+											<label for="IoPinSensorAqua"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Pin Sensor Aqua </label>
+											<div class="col-sm-4">
+												<select id="IoPinSensorAqua" class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="IoPinSensorTop"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Pin Sensor Oben </label>
+											<div class="col-sm-4">
+												<select id="IoPinSensorTop"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="IoPinSensorBottom"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Pin Sensor unten </label>
+											<div class="col-sm-4">
+												<select id="IoPinSensorBottom"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+
+										<!--  IO PINS SCHALTER,VENT,PUMPEN
+												
+										
+										
+										-->
+										
+
+										<div class="form-group row">
+											<label for="IOventFreshWaterPortLabel"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Pin Frischwasser Ventil</label>
+											<div class="col-sm-4">
+												<select id="IOventFreshWaterPort"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="IOventCleanPortLabel"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Pin Clean Ventil </label>
+											<div class="col-sm-4">
+												<select id="IOventCleanPort"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="IOpumpRefillPortLabel"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Pin Refill Pumpe </label>
+											<div class="col-sm-4">
+												<select id="IOpumpRefillPort"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<!-- Schalter Port/Pins für manuelle Steuerung -->
+										<div class="form-group row">
+											<label for="IOsmoseManuelPortLabel"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Schalter Osmose </label>
+											<div class="col-sm-4">
+												<select id="IOsmoseManuelPort"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label for="IOrefillManuelPortLabel"
+												class="col-sm-8 col-form-label col-form-label-sm">IO
+												Schalter Füllen </label>
+											<div class="col-sm-4">
+												<select id="IOrefillManuelPort"
+													class="custom-select custom-select-sm">
+													<option selected value = "0" >W00/P11/G</option>
+													<option 		 value = "1" >W01/P12/G</option>
+													<option 		 value = "2" >W02/P13/G</option>
+													<option 		 value = "3" >W03/P15/G</option>
+													<option 		 value = "4" >W04/P16/G</option>
+													<option 		 value = "5" >W05/P18/G</option>
+													<option 		 value = "6" >W06/P22/G</option>
+													<option 		 value = "7" >W07/P07</option>
+													<option 		 value = "8" >W08/P03</option>
+													<option 		 value = "9" >W09/P05</option>
+													<option 		 value = "10" >W10/P24</option>
+													<option 		 value = "11" >W11/P26</option>
+													<option 		 value = "12" >W12/P19</option>
+													<option 		 value = "13" >W13/P21</option>
+													<option 		 value = "14" >W14/P23</option>
+													<option 		 value = "15" >W15/P08</option>
+													<option 		 value = "16" >W16/P10</option>
+													<option 		 value = "17" >W17/P08</option>
+													<option 		 value = "21" >W21/P29/G</option>
+													<option 		 value = "22" >W22/P31/G</option>
+													<option 		 value = "23" >W23/P33/G</option>
+													<option 		 value = "24" >W24/P35/G</option>
+													<option 		 value = "25" >W25/P37/G</option>
+													<option 		 value = "26" >W26/P32/G</option>
+													<option 		 value = "27" >W27/P36/G</option>
+													<option 		 value = "28" >W28/P38/G</option>
+													<option 		 value = "29" >W29/P40/G</option>
+												</select>
+											</div>
+										</div>
+										<img class="mr-3" src="/img/PiPins.png" alt="Generic placeholder image">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+

@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1836906538/PATH/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1836906538/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1836906538/PATH/value=/home/pi/rpi/tools/arm-bcm2708/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf/bin\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1836906538/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1836906538/appendContributed=true

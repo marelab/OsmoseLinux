@@ -1,0 +1,35 @@
+{
+   "cmd" : "sendStatistik",
+   "statistik" : [
+      {
+         "duration" : 8,
+         "startdatum" : 1522844354,
+         "typ" : "RefillLauf"
+      },
+      {
+         "duration" : 22,
+         "startdatum" : 1522839600,
+         "typ" : "RefillLauf"
+      },
+      {
+         "duration" : 11,
+         "startdatum" : 1523049579,
+         "typ" : "RefillLauf"
+      },
+      {
+         "duration" : 11,
+         "startdatum" : 1523144800,
+         "typ" : "RefillLauf"
+      },
+      {
+         "duration" : 20,
+         "startdatum" : 1523227998,
+         "typ" : "RefillLauf"
+      },
+      {
+         "duration" : 23,
+         "startdatum" : 1523265542,
+         "typ" : "OsmoseLauf"
+      }
+   ]
+}
