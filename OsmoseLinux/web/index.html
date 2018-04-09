@@ -398,6 +398,17 @@
 				e = document.getElementById("osmoseRuntimeToClean");
 				e.value = json.osmoseRuntimeToClean;
 				
+				e = document.getElementById("emailInput");
+				e.value = json.email;
+				
+				//e = document.getElementById("emailCheck");
+				
+				if (json.emailAktiv == true){
+					$('#emailCheck').prop('checked', true);
+				}else{
+					$('#emailCheck').prop('checked', false);
+				}
+								
 				selectItemByValue(document.getElementById("IoPinSensorAqua"),json.IoPinSensorAqua);
 				selectItemByValue(document.getElementById("IoPinSensorTop"),json.IoPinSensorTop);
 				selectItemByValue(document.getElementById("IoPinSensorBottom"),json.IoPinSensorBottom);
@@ -559,8 +570,8 @@
 		        		yaxis: {
 		          			label: "Dauer",
 		          			min: 0,
-		          			tickInterval: 5,
-		          			tickOptions:{prefix: 'sec '}
+		          			tickInterval: 300,
+		          			tickOptions:{prefix: 'min '}
 		        		}
 		      			},
 		      			highlighter: {
@@ -650,6 +661,17 @@
 			e = document.getElementById("osmoseRuntimeToClean");
 			var osmoseRuntimeToClean = e.value;
 			jsonObj["osmoseRuntimeToClean"] = parseInt(e.value);
+			
+			<!-- MAIL -->
+			e = document.getElementById("emailInput");
+			var email = e.value;
+			jsonObj["email"] = e.value;
+			
+			if ($('#emailCheck').prop('checked') ){
+				jsonObj["emailAktiv"] = true;
+			}else{
+				jsonObj["emailAktiv"] = false;
+			}
 			
 			<!-- IO PIN -->
 			//jsonObj["IoPinSensorAqua"] 	 	= parseInt(document.getElementById("IoPinSensorAqua").selectedIndex);
@@ -895,12 +917,17 @@
 											<div class="card-header">Info Dienst</div>
 											<div class="card-body">
 												<div class="form-group row">
-													<label for="emaillabel"
-														class="col-sm-4 col-form-label col-form-label-sm">e-mail </label>
+													<label for="emaillabel" class="col-sm-4 col-form-label col-form-label-sm">e-mail </label>
 													<div class="col-sm-8">
-														<input type="email" class="form-control" id="email1Input" aria-describedby="emailHelp" placeholder="Enter email">
+														<input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
 													</div>
 												</div>
+												 <div class="form-group row">
+												 	<label class="col-sm-4 col-form-label col-form-label-sm" for="emailcheck">Email aktiviert</label>
+												 	<div class="col-sm-8">
+    											    	<input type="checkbox" class="form-check-input" id="emailCheck">
+    											    </div>
+  												</div>
 											</div>
 										</div>
 

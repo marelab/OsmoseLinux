@@ -15,6 +15,7 @@
 
 mail::mail(MessageBus* messageBus): MarelabBusNode(messageBus) {
 	this->mailadr = "marchammermann@googlemail.com";
+	this->activmailer = false;
 }
 
 mail::~mail() {
@@ -42,7 +43,7 @@ void mail::onNotify(Message message)
 	}
 
 }
-
+/*
 int mail::sendEmail(string to, string subject, string body) {
   int p2cFd[2];
 
@@ -83,9 +84,9 @@ int mail::sendEmail(string to, string subject, string body) {
 
   return 0;
 }
-
+*/
 void mail::SendMail(string subject, string texttosend) {
-
+ if (activmailer){
 	try{
 	string adr = "marchammermann@googlemail.com";
     char cmd[100];  // to hold the command.
@@ -111,6 +112,7 @@ void mail::SendMail(string subject, string texttosend) {
     	cout << "Mail ERROR thread" << endl;
 
     }
+ }
 }
 
 

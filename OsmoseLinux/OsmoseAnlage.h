@@ -13,7 +13,9 @@
 #include "Statistik.h"
 #include "spdlog/spdlog.h"
 #include "MessageBus.h"
+#include "mail.h"
 
+extern mail  *mailer;
 
 namespace std {
 extern std::shared_ptr<spdlog::logger> logger;

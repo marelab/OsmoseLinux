@@ -31,10 +31,11 @@ private:
 	unsigned long sendtime;
 	static const int READEND = 0;
 	static const int WRITEEND = 1;
+	bool  activmailer;
 
 private:
     void onNotify(Message message);
-    int sendEmail(string to, string subject, string body);
+    //int sendEmail(string to, string subject, string body);
 
 public:
 	mail(MessageBus* messageBus);
@@ -55,6 +56,14 @@ public:
 
 	void setSendtime(unsigned long sendtime) {
 		this->sendtime = sendtime;
+	}
+
+	bool isActivmailer() const {
+		return activmailer;
+	}
+
+	void setActivmailer(bool activmailer) {
+		this->activmailer = activmailer;
 	}
 };
 

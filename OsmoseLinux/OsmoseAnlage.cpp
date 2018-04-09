@@ -496,6 +496,8 @@ void OsmoseAnlage::Schreiben( Json::Value& root )
 	vOsmoseAnlage["runtimeForCleaning"]     = this->runtimeForCleaning;
 	vOsmoseAnlage["osmoseModus"]			= this->osmoseModus;
 	vOsmoseAnlage["osmoseRuntimeToClean"]   = this->osmoseRuntimeToClean;
+	vOsmoseAnlage["emailAktiv"]   			= mailer->isActivmailer();
+	vOsmoseAnlage["email"]   				= mailer->getMailadr() ;
 
 	vOsmoseAnlage["SENSOR_IR"]["sensorTop"]["SENSOR_NAME"] 		= this->top->NAME;
 	vOsmoseAnlage["SENSOR_IR"]["sensorTop"]["SENSOR_PORT"] 		= this->top->PORT;
@@ -546,6 +548,10 @@ void OsmoseAnlage::Lesen( Json::Value& master )
 	this->runtimeForCleaning     = root["runtimeForCleaning"].asInt();
 	this->osmoseModus			 = (OsmoseModus)root["osmoseModus"].asInt();
 	this->osmoseRuntimeToClean	 = root["osmoseRuntimeToClean"].asInt();
+	mailer->setActivmailer		   (root["emailAktiv"].asBool());
+	mailer->setMailadr             (root["email"].asCString());
+
+
 	Json::Value sensorTop,sensorBottom,sensorAqua;
 
 	delete top;
@@ -630,6 +636,9 @@ string OsmoseAnlage::getConfigAsJsonString(  )
 	vOsmoseAnlage["IOrefillManuelPort"]		= this->IOrefillManuel->PORT;
 	vOsmoseAnlage["IOventCleanPort"]		= this->IOventClean->PORT;
 	vOsmoseAnlage["IOventFreshWaterPort"]	= this->IOventFreshWater->PORT;
+
+	vOsmoseAnlage["emailAktiv"]   			= mailer->isActivmailer();
+	vOsmoseAnlage["email"]   				= mailer->getMailadr() ;
 
     jsonstring = writer.write(vOsmoseAnlage);
 	return   jsonstring;

@@ -61,11 +61,11 @@ MessageBus messageBus;
 
 struct timeval last_change_Aqua;
 static volatile int state;
-ConfigRegister *config;
-Statistik	   *statistik;
+ConfigRegister  *config;
+Statistik	    *statistik;
 
+mail            *mailer;
 OsmoseAnlage 	osmose(&messageBus);
-mail			mailer(&messageBus);
 
 string 			osmoseLinuxDir;
 
@@ -191,6 +191,7 @@ void SetupToJson(){
 }
 
 void WriteConfig(ptree *pt){
+
     auto jsonValue = pt->get<int>("sensorAquaDbounce");
 	osmose.setSensorAquaDbounce(jsonValue);
 	jsonValue = pt->get<int>("sensorTopDbounce");
@@ -207,6 +208,12 @@ void WriteConfig(ptree *pt){
 	osmose.setOsmoseModus((OsmoseModus)jsonValue);
 	jsonValue = pt->get<int>("osmoseRuntimeToClean");
 	osmose.setOsmoseRuntimeToClean((OsmoseModus)jsonValue);
+
+	auto jsonMail = pt->get<string>("email");
+	mailer->setMailadr             (jsonMail.c_str());
+
+	auto jsonMailAktiv = pt->get<bool>("emailAktiv");
+	mailer->setActivmailer		   (jsonMailAktiv);
 
 
 	jsonValue = pt->get<int>("IoPinSensorAqua");
@@ -306,7 +313,9 @@ int main (int argc, char *argv[])
 	server.config.port = 8080;
 	httpserver.config.port = 8090;
 	config 		= new ConfigRegister(osmoseLinuxDir);
-	statistik 	= new Statistik(&messageBus);
+	mailer		= new mail(&messageBus);
+	statistik   = new Statistik(&messageBus);
+
 
 	InitOsmose();
 

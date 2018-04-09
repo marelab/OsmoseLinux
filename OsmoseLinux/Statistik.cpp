@@ -8,9 +8,9 @@
 #include "Statistik.h"
 #include <fstream>
 #include <iostream>
-#include "ConfigRegister.h"
 
-extern ConfigRegister  *config;
+
+
 
 
 namespace std {

@@ -19,7 +19,9 @@
 #include "json/json.h"
 #include "spdlog/spdlog.h"
 #include "MessageBus.h"
+#include "ConfigRegister.h"
 
+extern ConfigRegister  *config;
 
 
 namespace std {
