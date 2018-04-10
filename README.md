@@ -2,7 +2,7 @@
 Control the revers osmosis production and refill process for a reef tank with a Raspberry Pi. Standalone Applikation that includes a web & websocket server. The Frontend is Web GUI based.
 
 Featuers:
-- Atotomatic controlled Fresh Water Vent
+- Automatic controlled Fresh Water Vent
 - Automatic controlled Clean Vent of Osmosis production
 - Automatic Refill pump controlling
 - using 3 Water Sensor for measurement Fish Tank and Refill Tank
