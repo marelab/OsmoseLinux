@@ -3,9 +3,9 @@
  * - Manueller Refill Aqua Sensor Aus
  *   Status in den Server bei OnLoad wird Server abgefragt
  *
- * - Layout fertigstellenm
- *   Grafik prüfen Automatik Betrieb
- *   Setup & Tabelle anpassen
+ * - OK Layout fertigstellenm
+ *   OK Grafik prüfen Automatik Betrieb
+ *   OK Setup & Tabelle anpassen
  *
  * - Date Time Anzeige
  *
@@ -111,7 +111,7 @@ void thread_io() {
 		AllOff();
 	}
 
-
+	ptree rootOld;
 
 	for (;;) {
 		// Baue status json um ggf bei connection zum
@@ -131,6 +131,7 @@ void thread_io() {
 		root.put("cycleTime", 	 			osmose.getCycleTime());
 		root.put("osmoseRuntime", 	 		osmose.getOsmoseRuntime() );
 		root.put("osmoseModus",      		osmose.getOsmoseModus());
+		root.put("osmoseRefillActiv",       osmose.isOsmoseRefillActiv());
 
 
 		oldProductionState = osmose.getOsmoseProductionLastState();
@@ -155,21 +156,24 @@ void thread_io() {
 		// Message System Delivery Messages
 		messageBus.notify();
 
-		auto send_stream = make_shared<WsServer::SendStream>();
-		std::stringstream ss;
+		if(root!=rootOld)
+		{
+			auto send_stream = make_shared<WsServer::SendStream>();
+			std::stringstream ss;
 
-		//ss.clear();
-		write_json(ss, root);
+			//ss.clear();
+			write_json(ss, root);
 
 
-		*send_stream << ss.str();
+			*send_stream << ss.str();
 
-		//cout << "Server send : " << ss.str() <<  endl;
-		// echo_all.get_connections() can also be used to solely receive connections on this endpoint
-		for (auto &a_connection : server.get_connections())
-			a_connection->send(send_stream);
-
-		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+			//cout << "Server send : " << ss.str() <<  endl;
+			// echo_all.get_connections() can also be used to solely receive connections on this endpoint
+			for (auto &a_connection : server.get_connections())
+				a_connection->send(send_stream);
+		}
+		rootOld = root;
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
 	}
 }

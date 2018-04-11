@@ -8,8 +8,10 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-reboot.css" />
-<link rel="stylesheet" type="text/css" href="chart/jquery.jqplot.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="bootstrap/css/bootstrap-reboot.css" />
+<link rel="stylesheet" type="text/css"
+	href="chart/jquery.jqplot.min.css" />
 <style>
 #sensor_aqua {
 	position: absolute; /* Sit on top of the page content */
@@ -181,84 +183,126 @@
 }
 
 #titelBalken {
-	background-color: rgba(0,0,0,0.5); /* Black background with opacity*/
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Black background with opacity*/
 }
 
-html { 
-  background: url(img/background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color:  hsla(350,50%,50%,0.3);
+html {
+	background: url(img/background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: hsla(350, 50%, 50%, 0.3);
 }
 
 .bg-light {
-    background-color: #000000aa !important;
+	background-color: #000000aa !important;
 }
 
 .border-white {
-    border-color: #00999900 !important;
-}
-.alert-primary {
-    color: #009999;
-    background-color: #333333aa;
-    border-color: #00999900;
-}
-.btn-outline-danger {
-    color: #009999FF;
-    background-color: transparent;
-    background-image: none;
-    border-color: #009999FF;
-}
-.btn-outline-danger:hover {
-     color: #009999FF;
-    background-color: transparent;
-    background-image: none;
-    border-color: #009999FF;
-}
-.nav-tabs {
-    border-bottom: 1px solid #009999ff;
+	border-color: #00999900 !important;
 }
 
+.alert-primary {
+	color: #009999;
+	background-color: #333333aa;
+	border-color: #00999900;
+}
+
+.btn-outline-danger {
+	color: #009999FF;
+	background-color: transparent;
+	background-image: none;
+	border-color: #009999FF;
+}
+
+.btn-outline-danger:hover {
+	color: #009999FF;
+	background-color: transparent;
+	background-image: none;
+	border-color: #009999FF;
+}
+
+.nav-tabs {
+	border-bottom: 1px solid #009999ff;
+}
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #FFFFFF;
-    background-color: #009999FF;
-    border-color: #009999FF #009999FF #009999FF;
-}
-nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    border-color: #009999FF #009999FF #009999FF;
-    color: #FFFFFFFF;
-}
-a {
-    color: #ffffff;
-}
-body {
-    color: #009999FF;
-    text-align: left;
+	color: #FFFFFF;
+	background-color: #009999FF;
+	border-color: #009999FF #009999FF #009999FF;
 }
 
+nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+	border-color: #009999FF #009999FF #009999FF;
+	color: #FFFFFFFF;
+}
+
+a {
+	color: #ffffff;
+}
+
+body {
+	color: #009999FF;
+	text-align: left;
+}
+.statistikTableHeader {
+	background-color: #333333aa;
+	color: #ffffff;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #333333aa;
+    border-bottom: 1px solid #009999FF;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #333333aa;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
 </style>
 
 <!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="jquery/jquery-3.0.0.slim.min.js"></script>
-	<script src="jquery/popper.js"></script>
-	<script src="bootstrap/js/bootstrap.js"></script>
-	<script src="jquery/reconnecting-websocket.js"></script>
-	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript" src="chart/jquery.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/jquery.jqplot.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.canvasTextRenderer.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.canvasAxisLabelRenderer.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.canvasAxisTickRenderer.js"></script>	
-	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.dateAxisRenderer.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.barRenderer.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.highlighter.js"></script>
-	<script language="javascript" type="text/javascript" src="chart/moment.js"></script>
-	
-	<script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="jquery/jquery-3.0.0.slim.min.js"></script>
+<script src="jquery/popper.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="jquery/reconnecting-websocket.js"></script>
+<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
+<script language="javascript" type="text/javascript"
+	src="chart/jquery.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/jquery.jqplot.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/plugins/jqplot.canvasTextRenderer.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/plugins/jqplot.canvasAxisLabelRenderer.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/plugins/jqplot.canvasAxisTickRenderer.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/plugins/jqplot.dateAxisRenderer.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/plugins/jqplot.barRenderer.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/plugins/jqplot.highlighter.js"></script>
+<script language="javascript" type="text/javascript"
+	src="chart/moment.js"></script>
+
+<script>
 		/* Commando
 			{
 			 "cmd"					:	"status"
@@ -335,7 +379,7 @@ body {
 		var refillAutomaticActiv = true;
 		
 		//var ws = new ReconnectingWebSocket("ws://osmosedev:8080/echo_all");
-		var wscmd = new ReconnectingWebSocket("ws://osmoseproduction:8080/wscmd");
+		var wscmd = new ReconnectingWebSocket("ws://osmosedev:8080/wscmd");
 		
 		wscmd.onclose = function(event) {
 			console.log("websocket closed occurred.");
@@ -399,6 +443,16 @@ body {
 					document.getElementById("zulauf_on").style.display = "block";
 				} else {
 					document.getElementById("zulauf_on").style.display = "none";
+				}
+				
+				if (json.osmoseRefillActiv == "true"){
+					console.log("Refill Automatik On/true");
+					document.getElementById("refillActive").innerHTML = "Füllen aktiviert";
+					refillAutomaticActiv = true;
+				}else{
+					console.log("Refill Automatik Off/false");
+					document.getElementById("refillActive").innerHTML = "Füllen deaktiviert";
+					refillAutomaticActiv = false;
 				}
 
 				//console.log("Status: "+ osmoseState[json.modus]);	
@@ -815,50 +869,55 @@ body {
 			document.getElementById("zulauf_on").style.display = "none";
 		}
 		function Init(){
-			doRefillAutomatic();
+			//doRefillAutomatic();
 		}
 </script>
 
 <title>OsmoseLinux</title>
 </head>
 <body onload="Init()">
-	
-
-
-
 	<div class="container">
-	<p></p>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light rounded border border-white" id="titelBalken">
-  <img src="img/osmoselinux_200.png" class="img-fluid" alt="Responsive image">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+		<p></p>
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light rounded border border-white"
+			id="titelBalken">
+			<img src="img/osmoselinux_200.png" class="img-fluid"
+				alt="Responsive image">
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-       
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-       
-		
-		<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-		  <div class="btn-group mr-2" role="group" aria-label="tool group">
-			    <span id="refillActive" class="btn btn-outline-danger btn-sm"></span>
-				<span id="modusTextInner" class="btn btn-outline-danger btn-sm"></span>
-				<span id="websocketstatustxt" class="btn btn-outline-danger btn-sm"></span>
-		   </div>
-			<div class="btn-group mr-2" role="group" aria-label="tool group">
-				<button type="button" class="btn btn-primary btn-sm" onclick="doReset()">Reset</button>
-				<button type="button" class="btn btn-primary btn-sm" onclick="doRefillAutomatic()">Refill On/Off</button>
-				<button type="button" class="btn btn-primary btn-sm" onclick="doHelp()">Hilfe</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"></li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+
+
+					<div class="btn-toolbar" role="toolbar"
+						aria-label="Toolbar with button groups">
+						<div class="btn-group mr-2" role="group" aria-label="tool group">
+							<span id="refillActive" class="btn btn-outline-danger btn-sm"></span>
+							<span id="modusTextInner" class="btn btn-outline-danger btn-sm"></span>
+							<span id="websocketstatustxt"
+								class="btn btn-outline-danger btn-sm"></span>
+						</div>
+						<div class="btn-group mr-2" role="group" aria-label="tool group">
+							<button type="button" class="btn btn-primary btn-sm"
+								onclick="doReset()">Reset</button>
+							<button type="button" class="btn btn-primary btn-sm"
+								onclick="doRefillAutomatic()">Refill On/Off</button>
+							<button type="button" class="btn btn-primary btn-sm"
+								onclick="doHelp()">Hilfe</button>
+						</div>
+					</div>
+				</form>
 			</div>
-		</div>
-    </form>
-  </div>
-</nav>
-	
+		</nav>
+
 		<!-- 
 		<div class="media">
 			<img class="mr-3" src="/img/PiPins.png" alt="Generic placeholder image">
@@ -866,11 +925,16 @@ body {
 		 -->
 		<p></p>
 		<nav>
-		<div class="nav nav-tabs" id="nav-tab" role="tablist">
-			<a class="nav-item nav-link active" href="#automatic" role="tab"  data-toggle="tab" aria-controls="profile" aria-selected="true"><h6>Automatik Betrieb</h6></a>
-			<a class="nav-item nav-link"        href="#statistik" role="tab" data-toggle="tab" aria-controls="statistik"  aria-selected="false" onclick="readStatistik()"><h6>Statistik</h6></a>
-			<a class="nav-item nav-link"        href="#setup" role="tab"      data-toggle="tab" aria-controls="setup"   aria-selected="false" onclick="readConfig()"><h6>Setup</h6></a>
-		</div>
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<a class="nav-item nav-link active" href="#automatic" role="tab"
+					data-toggle="tab" aria-controls="profile" aria-selected="true"><h6>Automatik
+						Betrieb</h6></a> <a class="nav-item nav-link" href="#statistik" role="tab"
+					data-toggle="tab" aria-controls="statistik" aria-selected="false"
+					onclick="readStatistik()"><h6>Statistik</h6></a> <a
+					class="nav-item nav-link" href="#setup" role="tab"
+					data-toggle="tab" aria-controls="setup" aria-selected="false"
+					onclick="readConfig()"><h6>Setup</h6></a>
+			</div>
 		</nav>
 
 		<!-- Tab panes -->
@@ -921,13 +985,13 @@ body {
 							<span id="statusTextInner" class="badge badge-secondary"></span>
 						</h6>
 					</div>
-					
+
 					<div id="refillText">
 						<h6 class="text-danger">
 							<span id="modusTextInnerRefill" class="badge badge-secondary"></span>
 						</h6>
 					</div>
-					
+
 					<div id="refillRuntimeText">
 						<h6 class="text-danger">
 							<span id="modusRefillRuntime" class="badge badge-secondary"></span>
@@ -936,41 +1000,38 @@ body {
 				</div>
 				<p></p>
 			</div>
-			
-			<div role="tabpanel" class="tab-pane fade" id="statistik">
-			<div class="container">
-			<p></p>
-			<div class="alert alert-primary" role="alert" >
-  				Refill Zyklen Dauer
-			</div>
-			<div class="mx-auto" id="refillDIV" style="height:400px;"></div>
-			<p></p>
-			<div class="alert alert-primary" role="alert" >
-  				Osmose Produktions Dauer
-			</div>
-			<div class="mx-auto" id="productionDIV" style="height:400px;"></div>
-			<p></p>
-			<div class="alert alert-primary" role="alert" >
-  				Liste Refill & Produktions Dauer
-			</div>
-			<table style="width: 100%" id="statistikData">
-     			<thead>
-          		<tr>
-               		<th>Typ</th>
-               		<th>Start</th>
-               		<th>Laufzeit</th>
-           		</tr>
-     			</thead>
-     			<tbody id="tbodystatistik">
-     			</tbody>
-				</table>
-			<p></p>
-			
 
+			<div role="tabpanel" class="tab-pane fade" id="statistik">
+				<div class="container">
+					<p></p>
+					<div class="alert alert-primary" role="alert">Refill Zyklen
+						Dauer</div>
+					<div class="mx-auto" id="refillDIV" style="height: 400px;"></div>
+					<p></p>
+					<div class="alert alert-primary" role="alert">Osmose
+						Produktions Dauer</div>
+					<div class="mx-auto" id="productionDIV" style="height: 400px;"></div>
+					<p></p>
+					<div class="alert alert-primary" role="alert">Liste Refill &
+						Produktions Dauer</div>
+					<table class="table table-sm table-striped" style="width: 100%" id="statistikData">
+						<thead class="thead-dark">
+							<tr class="statistikTableHeader">
+								<th>Typ</th>
+								<th>Start</th>
+								<th>Laufzeit</th>
+							</tr>
+						</thead>
+						<tbody id="tbodystatistik">
+						</tbody>
+					</table>
+					<p></p>
+
+
+				</div>
 			</div>
-			</div>
-			
-			
+
+
 			<div role="tabpanel" class="tab-pane fade" id="setup">
 				<p></p>
 				<form>
@@ -1020,7 +1081,7 @@ body {
 
 
 									<div class="col">
-									<p></p>
+										<p></p>
 										<div class="card"">
 											<div class="card-header">Start Modus</div>
 											<div class="card-body">
@@ -1038,23 +1099,28 @@ body {
 												</div>
 											</div>
 										</div>
-										
+
 										<p></p>
 										<div class="card"">
 											<div class="card-header">Info Dienst</div>
 											<div class="card-body">
 												<div class="form-group row">
-													<label for="emaillabel" class="col-sm-4 col-form-label col-form-label-sm">e-mail </label>
+													<label for="emaillabel"
+														class="col-sm-4 col-form-label col-form-label-sm">e-mail
+													</label>
 													<div class="col-sm-8">
-														<input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+														<input type="email" class="form-control" id="emailInput"
+															aria-describedby="emailHelp" placeholder="Enter email">
 													</div>
 												</div>
-												 <div class="form-group row">
-												 	<label class="col-sm-4 col-form-label col-form-label-sm" for="emailcheck">Email aktiviert</label>
-												 	<div class="col-sm-8">
-    											    	<input type="checkbox" class="form-check-input" id="emailCheck">
-    											    </div>
-  												</div>
+												<div class="form-group row">
+													<label class="col-sm-4 col-form-label col-form-label-sm"
+														for="emailcheck">Email aktiviert</label>
+													<div class="col-sm-8">
+														<input type="checkbox" class="form-check-input"
+															id="emailCheck">
+													</div>
+												</div>
 											</div>
 										</div>
 
@@ -1134,7 +1200,7 @@ body {
 								</div>
 								<p></p>
 								<div class="card">
-								
+
 									<div class="card-header">Raspberry PI Config</div>
 									<div class="card-body">
 
@@ -1143,34 +1209,35 @@ body {
 												class="col-sm-8 col-form-label col-form-label-sm">IO
 												Pin Sensor Aqua </label>
 											<div class="col-sm-4">
-												<select id="IoPinSensorAqua" class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+												<select id="IoPinSensorAqua"
+													class="custom-select custom-select-sm">
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1181,33 +1248,33 @@ body {
 											<div class="col-sm-4">
 												<select id="IoPinSensorTop"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1218,33 +1285,33 @@ body {
 											<div class="col-sm-4">
 												<select id="IoPinSensorBottom"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1254,7 +1321,7 @@ body {
 										
 										
 										-->
-										
+
 
 										<div class="form-group row">
 											<label for="IOventFreshWaterPortLabel"
@@ -1263,33 +1330,33 @@ body {
 											<div class="col-sm-4">
 												<select id="IOventFreshWaterPort"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1300,33 +1367,33 @@ body {
 											<div class="col-sm-4">
 												<select id="IOventCleanPort"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1337,33 +1404,33 @@ body {
 											<div class="col-sm-4">
 												<select id="IOpumpRefillPort"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1375,33 +1442,33 @@ body {
 											<div class="col-sm-4">
 												<select id="IOsmoseManuelPort"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
@@ -1412,37 +1479,38 @@ body {
 											<div class="col-sm-4">
 												<select id="IOrefillManuelPort"
 													class="custom-select custom-select-sm">
-													<option selected value = "0" >W00/P11/G</option>
-													<option 		 value = "1" >W01/P12/G</option>
-													<option 		 value = "2" >W02/P13/G</option>
-													<option 		 value = "3" >W03/P15/G</option>
-													<option 		 value = "4" >W04/P16/G</option>
-													<option 		 value = "5" >W05/P18/G</option>
-													<option 		 value = "6" >W06/P22/G</option>
-													<option 		 value = "7" >W07/P07</option>
-													<option 		 value = "8" >W08/P03</option>
-													<option 		 value = "9" >W09/P05</option>
-													<option 		 value = "10" >W10/P24</option>
-													<option 		 value = "11" >W11/P26</option>
-													<option 		 value = "12" >W12/P19</option>
-													<option 		 value = "13" >W13/P21</option>
-													<option 		 value = "14" >W14/P23</option>
-													<option 		 value = "15" >W15/P08</option>
-													<option 		 value = "16" >W16/P10</option>
-													<option 		 value = "17" >W17/P08</option>
-													<option 		 value = "21" >W21/P29/G</option>
-													<option 		 value = "22" >W22/P31/G</option>
-													<option 		 value = "23" >W23/P33/G</option>
-													<option 		 value = "24" >W24/P35/G</option>
-													<option 		 value = "25" >W25/P37/G</option>
-													<option 		 value = "26" >W26/P32/G</option>
-													<option 		 value = "27" >W27/P36/G</option>
-													<option 		 value = "28" >W28/P38/G</option>
-													<option 		 value = "29" >W29/P40/G</option>
+													<option selected value="0">W00/P11/G</option>
+													<option value="1">W01/P12/G</option>
+													<option value="2">W02/P13/G</option>
+													<option value="3">W03/P15/G</option>
+													<option value="4">W04/P16/G</option>
+													<option value="5">W05/P18/G</option>
+													<option value="6">W06/P22/G</option>
+													<option value="7">W07/P07</option>
+													<option value="8">W08/P03</option>
+													<option value="9">W09/P05</option>
+													<option value="10">W10/P24</option>
+													<option value="11">W11/P26</option>
+													<option value="12">W12/P19</option>
+													<option value="13">W13/P21</option>
+													<option value="14">W14/P23</option>
+													<option value="15">W15/P08</option>
+													<option value="16">W16/P10</option>
+													<option value="17">W17/P08</option>
+													<option value="21">W21/P29/G</option>
+													<option value="22">W22/P31/G</option>
+													<option value="23">W23/P33/G</option>
+													<option value="24">W24/P35/G</option>
+													<option value="25">W25/P37/G</option>
+													<option value="26">W26/P32/G</option>
+													<option value="27">W27/P36/G</option>
+													<option value="28">W28/P38/G</option>
+													<option value="29">W29/P40/G</option>
 												</select>
 											</div>
 										</div>
-										<img class="mr-3" src="/img/PiPins.png" alt="Generic placeholder image">
+										<img class="mr-3" src="/img/PiPins.png"
+											alt="Generic placeholder image">
 									</div>
 								</div>
 							</div>
@@ -1451,14 +1519,12 @@ body {
 				</form>
 			</div>
 		</div>
-<p></p>		
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded border border-white">
-
- <hr class="hr-primary" />
- copyright marc hammermann (C)2018   https://www.marelab.org 
-</nav>		
-		
-		
+		<p></p>
+		<nav
+			class="navbar navbar-expand-lg navbar-light bg-light rounded border border-white">
+			<hr class="hr-primary" />
+			2018&copy; by https://www.marelab.org
+		</nav>
 	</div>
 </body>
 </html>
