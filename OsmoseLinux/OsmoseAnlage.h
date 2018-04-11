@@ -71,7 +71,7 @@ private:
 	OsmoseRefillState		osmoseRefillState;
 	bool					sendErrorMailRefill;	// Flag das zeigt ob schon error Mail versendet wurde
 	//OsmoseManualState       osmoseManualState;
-
+	bool					osmoseRefillActiv;
 
 	unsigned long	refillRuntime;
 	unsigned long	refillStartTime;
@@ -409,6 +409,14 @@ public:
 	//const Statistik& getStatistik() const {
 	//	return statistik;
 	//}
+
+	bool isOsmoseRefillActiv() const {
+		return osmoseRefillActiv;
+	}
+
+	void setOsmoseRefillActiv(bool osmoseRefillActiv) {
+		this->osmoseRefillActiv = osmoseRefillActiv;
+	}
 };
 
 } /* namespace std */

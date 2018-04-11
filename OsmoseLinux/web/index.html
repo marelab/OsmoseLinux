@@ -8,6 +8,8 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-reboot.css" />
+<link rel="stylesheet" type="text/css" href="chart/jquery.jqplot.min.css" />
 <style>
 #sensor_aqua {
 	position: absolute; /* Sit on top of the page content */
@@ -19,7 +21,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -34,7 +36,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -49,7 +51,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -64,7 +66,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -79,7 +81,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -94,7 +96,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -109,7 +111,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -124,7 +126,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -139,7 +141,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -154,7 +156,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -169,7 +171,7 @@
 	right: 0px;
 	bottom: 0px;
 	/* background-color: rgba(0,0,0,0.5); Black background with opacity */
-	z-index: 2;
+	z-index: 1;
 	/* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 }
@@ -177,15 +179,73 @@
 #relativ {
 	position: relative;
 }
+
+#titelBalken {
+	background-color: rgba(0,0,0,0.5); /* Black background with opacity*/
+}
+
+html { 
+  background: url(img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color:  hsla(350,50%,50%,0.3);
+}
+
+.bg-light {
+    background-color: #000000aa !important;
+}
+
+.border-white {
+    border-color: #00999900 !important;
+}
+.alert-primary {
+    color: #009999;
+    background-color: #333333aa;
+    border-color: #00999900;
+}
+.btn-outline-danger {
+    color: #009999FF;
+    background-color: transparent;
+    background-image: none;
+    border-color: #009999FF;
+}
+.btn-outline-danger:hover {
+     color: #009999FF;
+    background-color: transparent;
+    background-image: none;
+    border-color: #009999FF;
+}
+.nav-tabs {
+    border-bottom: 1px solid #009999ff;
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #FFFFFF;
+    background-color: #009999FF;
+    border-color: #009999FF #009999FF #009999FF;
+}
+nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #009999FF #009999FF #009999FF;
+    color: #FFFFFFFF;
+}
+a {
+    color: #ffffff;
+}
+body {
+    color: #009999FF;
+    text-align: left;
+}
+
 </style>
-<title>OsmoseLinux</title>
-</head>
-<body>
-	<!-- Optional JavaScript -->
+
+<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="jquery/jquery-3.0.0.slim.min.js"></script>
 	<script src="jquery/popper.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 	<script src="jquery/reconnecting-websocket.js"></script>
 	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="excanvas.js"></script><![endif]-->
 	<script language="javascript" type="text/javascript" src="chart/jquery.js"></script>
@@ -197,7 +257,7 @@
 	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.barRenderer.js"></script>
 	<script language="javascript" type="text/javascript" src="chart/plugins/jqplot.highlighter.js"></script>
 	<script language="javascript" type="text/javascript" src="chart/moment.js"></script>
-	<link rel="stylesheet" type="text/css" href="chart/jquery.jqplot.min.css" />
+	
 	<script>
 		/* Commando
 			{
@@ -271,8 +331,11 @@
 		});
 		
 		
+		// Refill Automatik Active
+		var refillAutomaticActiv = true;
+		
 		//var ws = new ReconnectingWebSocket("ws://osmosedev:8080/echo_all");
-		var wscmd = new ReconnectingWebSocket("ws://osmosedev:8080/wscmd");
+		var wscmd = new ReconnectingWebSocket("ws://osmoseproduction:8080/wscmd");
 		
 		wscmd.onclose = function(event) {
 			console.log("websocket closed occurred.");
@@ -474,7 +537,7 @@
 				        statiRefill.push([graphdata , item['duration']]); 
 				     
 				     if (item["typ"]=="OsmoseLauf")
-				    	 statiProduction.push([graphdata , item['duration']]);
+				    	 statiProduction.push([graphdata , (item['duration']/60)]);
 					        
 				     $('#tbodystatistik').append(eachrow);
 				
@@ -498,19 +561,21 @@
 				    series:[{lineWidth:4, markerOptions:{style:'square'}}]
 				  });
 				  */
+				  
+				  
 				
-				$.jqplot('refillDIV',  [statiRefill],{
-				title:'Refill Dauer pro Tag',	
+				
+				plot = $.jqplot('refillDIV',  [statiRefill],{
+				//title:'Refill Dauer pro Tag',	
 				stackSeries: true,
      			seriesDefaults: {
      				renderer:$.jqplot.BarRenderer,
      			    rendererOptions: {            
      		            barPadding: 0,      // number of pixels between adjacent bars in the same
-     		                                // group (same category or bin).
+     		          		                  // group (same category or bin).
      		            barMargin: 0,      // number of pixels between adjacent groups of bars.
      		            barDirection: 'vertical', // vertical or horizontal.
      		            barWidth: 2
-
      		        }                
       			},
       			axes: {
@@ -519,16 +584,21 @@
         			tickRenderer: $.jqplot.CanvasAxisTickRenderer,
                     tickOptions: {
                          angle: -45,
-                         formatString:'%d.%m.%Y'
+                         formatString:'%d.%m.%Y',
+                         textColor: '#ffffff'
                     },
       				tickInterval: "1 day",
       				numberTicks: 14
         		},
         		yaxis: {
-          			label: "Dauer",
+          		    label: "Dauer",
+          		    textColor: '#ffffff',
           			min: 0,
           			tickInterval: 5,
-          			tickOptions:{prefix: 'sec '}
+          			tickOptions:{
+          				prefix: 'sec ',
+          				textColor: '#ffffff'
+          			},
         		}
       			},
       			highlighter: {
@@ -540,10 +610,11 @@
       	            </table>'
       	        }
     			});
-				  
+				 
 				
-				  $.jqplot('productionDIV',  [statiProduction],{
-						title:'Dauer Osmose Produktionslauf',	
+				
+				$.jqplot('productionDIV',  [statiProduction],{
+						//title:'Dauer Osmose Produktionslauf',	
 						stackSeries: true,
 		     			seriesDefaults: {
 		     				renderer:$.jqplot.BarRenderer,
@@ -562,16 +633,21 @@
 		        			tickRenderer: $.jqplot.CanvasAxisTickRenderer,
 		                    tickOptions: {
 		                         angle: -45,
-		                         formatString:'%d.%m.%Y'
+		                         formatString:'%d.%m.%Y',
+		                         textColor: '#ffffff'
 		                    },
 		      				tickInterval: "1 day",
 		      				numberTicks: 14
 		        		},
 		        		yaxis: {
 		          			label: "Dauer",
+		          			textColor: '#ffffff',
 		          			min: 0,
-		          			tickInterval: 300,
-		          			tickOptions:{prefix: 'min '}
+		          			tickInterval: 30,
+		          			tickOptions:{
+		          				textColor: '#ffffff',
+		          				prefix: 'min '
+		          			}
 		        		}
 		      			},
 		      			highlighter: {
@@ -605,6 +681,25 @@
 
 		function doReset() {
 			wscmd.send("{\"cmd\":\"reset\"}");
+		}
+		
+		// Refill Automatic An/Aus
+		function doRefillAutomatic(){
+			if (refillAutomaticActiv==true){
+				console.log("Refill Automatik Off");
+				wscmd.send("{\"cmd\":\"refillOff\"}");
+				document.getElementById("refillActive").innerHTML = "Füllen deaktiviert";
+				//document.getElementById("modusRefillRuntime").innerHTML = "";
+				refillAutomaticActiv = false;
+			}else{
+				console.log("Refill Automatik On")
+				wscmd.send("{\"cmd\":\"refillOn\"}");
+				document.getElementById("refillActive").innerHTML = "Füllen aktiviert";
+				//document.getElementById("modusRefillRuntime").innerHTML = "";
+				refillAutomaticActiv = true;
+			}
+			//
+			//
 		}
 
 		function fwscmd() {
@@ -719,26 +814,62 @@
 			document.getElementById("refill_on").style.display = "none";
 			document.getElementById("zulauf_on").style.display = "none";
 		}
-	</script>
+		function Init(){
+			doRefillAutomatic();
+		}
+</script>
+
+<title>OsmoseLinux</title>
+</head>
+<body onload="Init()">
+	
 
 
 
 	<div class="container">
-		<div id="websocketstatus">
-			<h6 class="text-danger">
-				<span id="websocketstatustxt" class="badge badge-secondary"></span>
-			</h6>
+	<p></p>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light rounded border border-white" id="titelBalken">
+  <img src="img/osmoselinux_200.png" class="img-fluid" alt="Responsive image">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+       
+		
+		<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+		  <div class="btn-group mr-2" role="group" aria-label="tool group">
+			    <span id="refillActive" class="btn btn-outline-danger btn-sm"></span>
+				<span id="modusTextInner" class="btn btn-outline-danger btn-sm"></span>
+				<span id="websocketstatustxt" class="btn btn-outline-danger btn-sm"></span>
+		   </div>
+			<div class="btn-group mr-2" role="group" aria-label="tool group">
+				<button type="button" class="btn btn-primary btn-sm" onclick="doReset()">Reset</button>
+				<button type="button" class="btn btn-primary btn-sm" onclick="doRefillAutomatic()">Refill On/Off</button>
+				<button type="button" class="btn btn-primary btn-sm" onclick="doHelp()">Hilfe</button>
+			</div>
 		</div>
+    </form>
+  </div>
+</nav>
+	
 		<!-- 
 		<div class="media">
 			<img class="mr-3" src="/img/PiPins.png" alt="Generic placeholder image">
 		</div>
 		 -->
+		<p></p>
 		<nav>
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
-			<a class="nav-item nav-link active" href="#automatic" role="tab"  data-toggle="tab" aria-controls="profile" aria-selected="true">Automatik Betrieb</a>
-			<a class="nav-item nav-link"       href="#statistik" role="tab" data-toggle="tab" aria-controls="statistik"  aria-selected="false" onclick="readStatistik()">Statistik</a>
-			<a class="nav-item nav-link"        href="#setup" role="tab"      data-toggle="tab" aria-controls="setup"   aria-selected="false" onclick="readConfig()">Setup</a>
+			<a class="nav-item nav-link active" href="#automatic" role="tab"  data-toggle="tab" aria-controls="profile" aria-selected="true"><h6>Automatik Betrieb</h6></a>
+			<a class="nav-item nav-link"        href="#statistik" role="tab" data-toggle="tab" aria-controls="statistik"  aria-selected="false" onclick="readStatistik()"><h6>Statistik</h6></a>
+			<a class="nav-item nav-link"        href="#setup" role="tab"      data-toggle="tab" aria-controls="setup"   aria-selected="false" onclick="readConfig()"><h6>Setup</h6></a>
 		</div>
 		</nav>
 
@@ -790,16 +921,13 @@
 							<span id="statusTextInner" class="badge badge-secondary"></span>
 						</h6>
 					</div>
-					<div id="modusText">
-						<h6 class="text-danger">
-							<span id="modusTextInner" class="badge badge-secondary"></span>
-						</h6>
-					</div>
+					
 					<div id="refillText">
 						<h6 class="text-danger">
 							<span id="modusTextInnerRefill" class="badge badge-secondary"></span>
 						</h6>
 					</div>
+					
 					<div id="refillRuntimeText">
 						<h6 class="text-danger">
 							<span id="modusRefillRuntime" class="badge badge-secondary"></span>
@@ -807,39 +935,38 @@
 					</div>
 				</div>
 				<p></p>
-				<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-					<div class="btn-group mr-2" role="group" aria-label="Second group">
-						<button type="button" class="btn btn-outline-primary btn-sm" onclick="doReset()">Reset</button>
-					</div>
-			    </div>
 			</div>
 			
 			<div role="tabpanel" class="tab-pane fade" id="statistik">
 			<div class="container">
-			<p>Refill Zyklen Dauer</p>
+			<p></p>
+			<div class="alert alert-primary" role="alert" >
+  				Refill Zyklen Dauer
+			</div>
 			<div class="mx-auto" id="refillDIV" style="height:400px;"></div>
 			<p></p>
-			<p></p>
-			<p>Osmose Produktions Dauer</p>
+			<div class="alert alert-primary" role="alert" >
+  				Osmose Produktions Dauer
+			</div>
 			<div class="mx-auto" id="productionDIV" style="height:400px;"></div>
 			<p></p>
-			<p></p>
-			<p>Liste Refill & Produktions Dauer</p>
-			<table style="width: 100%">
-     		<thead>
+			<div class="alert alert-primary" role="alert" >
+  				Liste Refill & Produktions Dauer
+			</div>
+			<table style="width: 100%" id="statistikData">
+     			<thead>
           		<tr>
                		<th>Typ</th>
                		<th>Start</th>
                		<th>Laufzeit</th>
            		</tr>
-     		</thead>
-     		<tbody id="tbodystatistik">
-     		</tbody>
-			</table>
-			<p></p>
+     			</thead>
+     			<tbody id="tbodystatistik">
+     			</tbody>
+				</table>
 			<p></p>
 			
-			
+
 			</div>
 			</div>
 			
@@ -1324,6 +1451,14 @@
 				</form>
 			</div>
 		</div>
+<p></p>		
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded border border-white">
+
+ <hr class="hr-primary" />
+ copyright marc hammermann (C)2018   https://www.marelab.org 
+</nav>		
+		
+		
 	</div>
 </body>
 </html>

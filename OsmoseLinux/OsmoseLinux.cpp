@@ -1,9 +1,16 @@
 
 /* ToDo:
  * - Manueller Refill Aqua Sensor Aus
- * - Date Time Anzeige
- * - Statistik Seite
+ *   Status in den Server bei OnLoad wird Server abgefragt
  *
+ * - Layout fertigstellenm
+ *   Grafik prüfen Automatik Betrieb
+ *   Setup & Tabelle anpassen
+ *
+ * - Date Time Anzeige
+ *
+ * - OK Statistik Seite
+ * - OK Email Conf On/Off
  */
 #include <iostream>
 #include <stdio.h>
@@ -274,6 +281,24 @@ void command(ptree *pt){
 			logger->debug("Reset manual RefillProduction");
 			osmose.resetRefillProduction();
 		}
+	}
+	else if (cmd=="refillOn"){  // Reset der Anlage
+		logger->debug("Automatic Refill activated");
+		osmose.setOsmoseRefillActiv(true);
+		// Pumpe immer abschalten da es sein kann das im dem Augenblick
+		// wo ein automatischer Refill Vorgang mit Pumpe an der Sensor
+		// & Timeout deaktievert wird es zum endlos füllen kommt.
+		osmose.setRefillPump(false);
+		osmose.resetRefillProduction();
+	}
+	else if (cmd=="refillOff"){  // Reset der Anlage
+		logger->debug("Automatic Refill deactivated");
+		osmose.setOsmoseRefillActiv(false);
+		// Pumpe immer abschalten da es sein kann das im dem Augenblick
+		// wo ein automatischer Refill Vorgang mit Pumpe an der Sensor
+		// & Timeout deaktievert wird es zum endlos füllen kommt.
+		osmose.setRefillPump(false);
+		osmose.resetRefillProduction();
 	}
 }
 

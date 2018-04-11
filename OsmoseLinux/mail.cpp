@@ -88,7 +88,7 @@ int mail::sendEmail(string to, string subject, string body) {
 void mail::SendMail(string subject, string texttosend) {
  if (activmailer){
 	try{
-	string adr = "marchammermann@googlemail.com";
+	string adr = mailadr;
     char cmd[100];  // to hold the command.
     //char body[] = "SO rocks";    // email body.
     char tempFile[100];     // name of tempfile.

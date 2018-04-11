@@ -58,6 +58,8 @@ OsmoseAnlage::OsmoseAnlage(MessageBus *messageBus ) : MarelabBusNode(messageBus)
 
 	sendErrorMailRefill 	= false;
 
+	osmoseRefillActiv 		= true;
+
 	//Statistik statistik(messageBus);
 
 
@@ -176,7 +178,7 @@ OsmoseRefillState OsmoseAnlage::stateMachineRefill() {
 	//Message startRefill("STATISTIK","MESSAGE->stateMachineRefill",NULL);
 	//send(startRefill);
 
-	// Schalter REFILL
+	// Schalter REFILL am Gehäuse
 	if (this->getIOrefillManuel()->read()== true)
 	{
 		osmoseRefillState = refill_manual;
@@ -189,7 +191,7 @@ OsmoseRefillState OsmoseAnlage::stateMachineRefill() {
 		return osmoseRefillState;
 	}
 
-
+	if (osmoseRefillActiv){
 
 	if (refillRuntime < refillFaillTime) {
 		reachedRefillTime = false;
@@ -293,6 +295,7 @@ OsmoseRefillState OsmoseAnlage::stateMachineRefill() {
 		return osmoseRefillState;
 	}
 	osmoseRefillState = refill_error;
+	}
 	return osmoseRefillState;
 }
 
